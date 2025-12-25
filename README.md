@@ -1,3 +1,5 @@
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/704c9a9e-9f04-46f0-84e7-6d087512d766" />
+
 # 🏛️ Legacy Code Archaeologist
 > **"Turn spaghetti code into a treasure map."**
 
