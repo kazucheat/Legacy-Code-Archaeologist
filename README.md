@@ -1,6 +1,4 @@
-
-![image](https://github.com/user-attachments/assets/737423eb-4274-404f-b0ea-defc41395127)
-
+# 🏛️ Legacy Code Archaeologist
 > **"Turn spaghetti code into a treasure map."**
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
