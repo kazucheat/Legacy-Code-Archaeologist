@@ -4,7 +4,7 @@ services:
   app:
     image: mcr.microsoft.com/devcontainers/javascript-node:18-bullseye
     volumes:
-      - ..:/workspaces/${localWorkspaceFolderBasename}:cached
+      - ..:/workspaces/${Legacy-Code-Archaeologist}:cached
     command: sleep infinity
     network_mode: service:db
 

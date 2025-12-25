@@ -1,27 +1,26 @@
 {
   "name": "Legacy Code Archaeologist",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
+        "ms-python.python",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "ms-vscode.vscode-typescript-next",
-        "octref.vetur",
-        "mtxr.sqltools",
-        "mtxr.sqltools-driver-pg"
+        "ms-azuretools.vscode-docker"
       ]
     }
   },
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
-    },
-    "ghcr.io/devcontainers/features/github-cli:1": {}
-  },
-  "forwardPorts": [3000, 5173, 5432],
-  "postCreateCommand": "npm install && cd frontend && npm install && cd ../backend && npm install",
-  "remoteUser": "node"
+  // THE PRE-YIELD: This creates your .env file from GitHub Secrets automatically
+  "postCreateCommand": "echo \"OPENAI_API_KEY=${OPENAI_API_KEY}\" > .env && echo \"PORT=3000\" >> .env && npm install",
+  
+  "remoteEnv": {
+    "OPENAI_API_KEY": "${localEnv:OPENAI_API_KEY}"
+  }
 }
